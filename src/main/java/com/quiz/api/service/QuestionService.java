@@ -6,18 +6,14 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.quiz.api.dto.QuestionRequest;
 import com.quiz.api.entity.Question;
-import com.quiz.api.entity.Quiz;
 import com.quiz.api.repository.QuestionRepository;
-import com.quiz.api.repository.QuizRepository;
 
 @Service
 public class QuestionService {
     
     @Autowired
     private QuestionRepository questionRepository;
-    private QuizRepository quizRepository;
 
     public List<Question> getAll(){
         return questionRepository.findAll();
