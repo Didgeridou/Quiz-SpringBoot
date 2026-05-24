@@ -21,7 +21,7 @@ public class Reponse {
     private String texte;
 
     @Column(nullable = false)
-    private boolean bonneReponse;
+    private boolean bonneReponse = false;
 
     @Column(nullable = false)
     private Position position = Position.A;

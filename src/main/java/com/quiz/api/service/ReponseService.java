@@ -4,10 +4,12 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.quiz.api.entity.Reponse;
 import com.quiz.api.repository.ReponseRepository;
 
+@Service
 public class ReponseService {
     
     @Autowired

@@ -3,10 +3,12 @@ package com.quiz.api.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.quiz.api.entity.Redacteur;
 import com.quiz.api.repository.RedacteurRepository;
 
+@Service
 public class RedacteurService {
     
     @Autowired

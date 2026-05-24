@@ -14,6 +14,10 @@ public class QuizRequest {
         return nom;
     }
 
+    public void setNom(String nom){
+        this.nom = nom;
+    }
+
     public Long getRedacteurId(){
         return redacteurId;
     }
@@ -22,7 +26,9 @@ public class QuizRequest {
         return categorie;
     }
 
-
+    public void setCategorie(Quiz.Categorie categorie){
+        this.categorie = categorie;
+    }
 
 }
 

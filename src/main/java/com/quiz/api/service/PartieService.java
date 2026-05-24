@@ -4,10 +4,12 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.quiz.api.entity.Partie;
 import com.quiz.api.repository.PartieRepository;
 
+@Service
 public class PartieService {
 
     @Autowired
@@ -21,7 +23,7 @@ public class PartieService {
         return partieRepository.findById(id);
     }
 
-    public Partie createPartie(Partie partie){
+    public Partie create(Partie partie){
         return partieRepository.save(partie);
     }
 

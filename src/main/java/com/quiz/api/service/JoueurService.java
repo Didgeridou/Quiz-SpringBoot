@@ -4,10 +4,12 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.quiz.api.entity.Joueur;
 import com.quiz.api.repository.JoueurRepository;
 
+@Service
 public class JoueurService {
 
     @Autowired
@@ -21,7 +23,7 @@ public class JoueurService {
         return joueurRepository.findById(id);
     }
 
-    public Joueur createJoueur(Joueur joueur){
+    public Joueur create(Joueur joueur){
         return joueurRepository.save(joueur);
     }
 
