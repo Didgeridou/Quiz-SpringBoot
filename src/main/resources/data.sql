@@ -1,1 +1,0 @@
-INSERT INTO redacteurs (nom, prenom) VALUES ('Marie', 'Elisabette');
