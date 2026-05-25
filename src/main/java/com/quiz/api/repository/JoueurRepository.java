@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.quiz.api.entity.Joueur;
 
-public interface JoueurRepository extends JpaRepository<Joueur, String>{
+public interface JoueurRepository extends JpaRepository<Joueur, Long>{
     
 }

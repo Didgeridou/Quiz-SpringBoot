@@ -18,6 +18,7 @@ public class QuizService {
     @Autowired
     private QuizRepository quizRepository;
 
+    @Autowired
     private RedacteurRepository redacteurRepository;
 
     public List<Quiz> getAll(){
@@ -48,7 +49,6 @@ public class QuizService {
         }
         return false;
     }
-
-
-    
 }
+
+

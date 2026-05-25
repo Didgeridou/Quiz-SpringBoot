@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.quiz.api.dto.PartieRequest;
 import com.quiz.api.entity.Partie;
 import com.quiz.api.service.PartieService;
 
@@ -29,8 +30,10 @@ public class PartieController {
     }
 
     @PostMapping
-    public ResponseEntity<Partie> create(@RequestBody Partie partie) {
-        Partie newPartie = service.create(partie);
+    public ResponseEntity<Partie> create(@RequestBody PartieRequest request) {
+        Partie newPartie = service.create(request);
         return ResponseEntity.status(HttpStatus.CREATED).body(newPartie);
     }
+
+    
 }

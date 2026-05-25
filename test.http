@@ -1,0 +1,57 @@
+### 1. Créer un rédacteur
+POST <http://localhost:8080/api/redacteurs>
+Content-Type: application/json
+
+{
+  "nom": "Dupont",
+  "prenom": "Marie"
+}
+
+### 2. Créer un quiz (remplacer 1 par l'id du rédacteur créé)
+POST <http://localhost:8080/api/quizz>
+Content-Type: application/json
+
+{
+  "nom": "Quiz Cinéma",
+  "categorie": "CINEMA",
+  "redacteurId": 1
+}
+
+###
+
+### 3. Ajouter une question au quiz (remplacer 1 par l'id du quiz)
+POST <http://localhost:8080/api/questions>
+Content-Type: application/json
+
+{
+  "titre": "Qui a réalisé Titanic ?",
+  "quizId": 1
+}
+
+###
+
+### 4. Créer un joueur
+POST <http://localhost:8080/api/joueurs>
+Content-Type: application/json
+
+{
+  "nom": "Martin",
+  "prenom": "Lucas"
+}
+
+###
+
+### 5. Enregistrer une partie
+POST <http://localhost:8080/api/parties>
+Content-Type: application/json
+
+{
+  "joueurId": 1,
+  "quizId": 1,
+  "score": 4
+}
+
+###
+
+### 6. Lister toutes les parties
+GET <http://localhost:8080/api/parties>

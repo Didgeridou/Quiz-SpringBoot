@@ -19,7 +19,7 @@ public class JoueurService {
         return joueurRepository.findAll();
     }
 
-    public Optional<Joueur> getById(String id){
+    public Optional<Joueur> getById(Long id){
         return joueurRepository.findById(id);
     }
 
@@ -27,7 +27,7 @@ public class JoueurService {
         return joueurRepository.save(joueur);
     }
 
-    public boolean delete(String id){
+    public boolean delete(Long id){
         if(joueurRepository.existsById(id)){
             joueurRepository.deleteById(id);
             return true;

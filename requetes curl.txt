@@ -1,0 +1,31 @@
+// Créer un rédacteur
+curl -X POST http://localhost:8080/api/redacteurs \
+  -H "Content-Type: application/json" \
+  -d '{"nom": "Dupont", "prenom": "Marie"}'
+
+
+// Créer un quiz
+curl -X POST http://localhost:8080/api/quizz \
+  -H "Content-Type: application/json" \
+  -d '{"nom": "Quiz Cinéma", "categorie": "CINEMA","redacteurId": 1}'
+
+
+// Créer une question
+curl -X POST http://localhost:8080/api/questions \
+  -H "Content-Type: application/json" \
+  -d '{"titre": "Qui a réalisé Titanic ?", "quizId": 1}'
+
+
+// Créer un joueur
+curl -X POST http://localhost:8080/api/joueurs \
+  -H "Content-Type: application/json" \
+  -d '{"nom": "Martin","prenom": "Lucas"}'
+
+// Créer une partie
+curl -X POST http://localhost:8080/api/parties \
+  -H "Content-Type: application/json" \
+  -d '{"joueurId": 1,"quizId": 1,"score": 4}'
+
+
+// Afficher toutes les parties
+curl http://localhost:8080/api/parties
